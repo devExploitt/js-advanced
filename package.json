@@ -1,0 +1,30 @@
+{
+  "name": "library-app",
+  "version": "1.0.0",
+  "description": "Библиотека книг",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server",
+    "build": "rollup -c --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devExploitt/library-app.git"
+  },
+  "author": "Ivan Romanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devExploitt/library-app/issues"
+  },
+  "homepage": "https://github.com/devExploitt/library-app#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "eslint": "^9.11.1",
+    "rollup": "^4.24.0",
+    "rollup-plugin-import-css": "^3.5.4"
+  },
+  "dependencies": {
+    "on-change": "^5.0.1"
+  }
+}

@@ -21,6 +21,7 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.3.0",
     "eslint": "^9.11.1",
+    "jsdoc": "^4.0.3",
     "rollup": "^4.24.0",
     "rollup-plugin-import-css": "^3.5.4"
   },

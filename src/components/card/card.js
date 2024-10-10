@@ -8,8 +8,14 @@ export class Card extends DivComponent {
     this.cardState = cardState;
   }
 
-  addFavorite() {}
-  removeFavorite() {}
+  #addToFavorites() {
+    this.appState.favorites.push(this.cardState);
+  }
+  #deleteFromFavorites() {
+    this.appState.favorites = this.appState.favorites.filter(
+      (b) => b.key !== this.cardState.key
+    );
+  }
   render() {
     this.el.classList.add('card');
     const existInFavorites = this.appState.favorites.find(
@@ -41,8 +47,17 @@ export class Card extends DivComponent {
               : '<img src="/static/favorites-white.svg"/>'
           }  </button>
         </div>
-      </div>`;
-
+      </div>
+      `;
+    if (existInFavorites) {
+      this.el
+        .querySelector('.button_add')
+        .addEventListener('click', this.#deleteFromFavorites.bind(this));
+    } else {
+      this.el
+        .querySelector('.button_add')
+        .addEventListener('click', this.#addToFavorites.bind(this));
+    }
     return this.el;
   }
 }

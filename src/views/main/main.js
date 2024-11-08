@@ -11,7 +11,7 @@ export class MainView extends AbstractView {
     numFound: 0,
     loading: false,
     searchQuery: undefined,
-    offset: 0,
+    offset: 0
   };
 
   constructor(appState) {
@@ -29,7 +29,6 @@ export class MainView extends AbstractView {
 
   appStateHook(path) {
     if (path === 'favorites') {
-      console.log(path);
       this.render();
     }
   }

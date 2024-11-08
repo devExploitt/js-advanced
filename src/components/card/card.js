@@ -23,7 +23,7 @@ export class Card extends DivComponent {
     );
 
     this.el.innerHTML = `
-      <div class="card__image">>img src="https://covers.openlibrary.org/b/olid/${
+      <div class="card__image"><img src="https://covers.openlibrary.org/b/olid/${
         this.cardState.cover_edition_key
       }-M.jpg" alt="Обложка" /> 
       </div>
@@ -44,18 +44,18 @@ export class Card extends DivComponent {
           ${
             existInFavorites
               ? '<img src="/static/favorites.svg"/>'
-              : '<img src="/static/favorites-white.svg"/>'
+              : '<img src="/static/favorite-white.svg"/>'
           }  </button>
         </div>
       </div>
       `;
     if (existInFavorites) {
       this.el
-        .querySelector('.button_add')
+        .querySelector('.button-add')
         .addEventListener('click', this.#deleteFromFavorites.bind(this));
     } else {
       this.el
-        .querySelector('.button_add')
+        .querySelector('.button-add')
         .addEventListener('click', this.#addToFavorites.bind(this));
     }
     return this.el;

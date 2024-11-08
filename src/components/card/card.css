@@ -47,7 +47,7 @@
   display: flex;
 }
 
-.button_add {
+.button-add {
   border-radius: 6px;
   width: 36px;
   height: 32px;
@@ -55,10 +55,10 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--white);
-  background: none;
+  background: var(--black);
   cursor: pointer;
 }
 
-.button_add:active {
+.button__active {
   background: var(--white);
 }
